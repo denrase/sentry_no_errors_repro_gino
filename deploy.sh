@@ -8,6 +8,9 @@ set -e  # Exit on error
 echo "Cleaning Flutter build..."
 flutter clean
 
+echo "Removing CocoaPods artifacts..."
+rm -rf ios/Podfile.lock ios/Pods
+
 echo "Getting Flutter dependencies..."
 flutter pub get
 
