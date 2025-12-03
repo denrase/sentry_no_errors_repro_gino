@@ -3,8 +3,7 @@ import 'package:sentry_flutter/sentry_flutter.dart';
 
 Future<void> main() async {
   await SentryFlutter.init((options) {
-    options.dsn =
-        'https://f053b4bba1216dbc7cca84f18d246b1c@o376011.ingest.us.sentry.io/4508958566055936';
+    options.dsn = '<YOUR_SENTRY_DSN>';
   }, appRunner: () => runApp(const MyApp()));
 }
 
