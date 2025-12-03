@@ -52,6 +52,18 @@ dev_dependencies:
   # rules and activating additional ones.
   flutter_lints: ^6.0.0
 
+dependency_overrides:
+  sentry:
+    git:
+      url: https://github.com/getsentry/sentry-dart.git
+      ref: test/objc_9.2.1
+      path: packages/dart
+  sentry_flutter:
+    git:
+      url: https://github.com/getsentry/sentry-dart.git
+      ref: test/objc_9.2.1
+      path: packages/flutter
+
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
