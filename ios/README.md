@@ -2,6 +2,8 @@
 
 This project is a repro where sentry would not capture exceptions.
 
+## Pods
+
 ## Run
 
 - run `./deploy.sh` to build and deploy the app to the device.
@@ -30,3 +32,20 @@ If the app is integrated with cocoapods and frameworks are statically linked, we
 target 'Runner' do
   use_frameworks! :linkage => :static
 ```
+
+This is the current commit. The SPM setup will not be committed.
+
+## SPM
+
+Setup SPM
+
+```bash
+flutter config --enable-swift-package-manager
+flutter run
+```
+
+## Experiments
+
+- Run with SPM enabled without changing pods  ✅
+- Remove `STRIP_STYLE = "non-global";` from project file ❌
+- Remove `Podfile` (Build will generate Podfile without static linking option.) ✅
